@@ -51,10 +51,12 @@ public class Main {
 
         ArrayList<Integer> result = formList(count);
 
-        result.sort(Integer::compareTo);
-
-        for (Integer i : result) {
-            System.out.print(outFormat(i));
+        if (result.isEmpty()) {
+            System.out.println(0);
+        } else {
+            for (Integer i : result) {
+                System.out.print(outFormat(i));
+            }
         }
     }
 }
